@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my PAN card uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. OCR, detection and export run in your browser. Network requests load software and optional page analytics, not your document. Inspect DevTools → Network or read the source on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What part of the PAN card is masked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The detected full 10-character PAN number and face photograph are selected by default. Detected Aadhaar numbers, passport MRZ regions and probable UIDAI QR codes are also selected. Review each selection and check which fields the recipient needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does PAN detection work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local OCR looks for five letters, four digits and a final letter, then checks the fourth character against PAN holder-type codes. These checks reduce false positives but do not prove a number is a real PAN. Detection can miss content or select a wrong region; review the output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it cover my signature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Signatures are not detected automatically. Use manual mode to draw a rectangle over your signature or any other content you want hidden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What files and sizes work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPG, PNG, WebP and PDF up to 20 MB and 10 PDF pages, subject to the 40-million-pixel per-page and 80-million-pixel document budgets after rasterization. Resize large images or split large PDFs if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the output contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A new image-only PDF with selected regions painted solid black, no original text layer and no removable mask shapes. The source file is unchanged. Unmasked personal details remain visible; verify every page before sharing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is this free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The consumer tool is free and open source. A browser-side business integration is planned, not currently available. Join the API waitlist for updates."
+      }
+    }
+  ]
+}

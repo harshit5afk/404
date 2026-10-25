@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my Aadhaar PDF uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your browser parses, masks and exports it locally. First use downloads software assets, and optional analytics sends page usage statistics, but no request carries your document."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a password-protected eAadhaar PDF work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. Open the PDF in a trusted local viewer using your password, then use Print → Save as PDF if the viewer permits it to create an unprotected copy. Choose that copy in DocRedact. Keep it on your device and delete it when no longer needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it hide in the PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Detected first 8 Aadhaar digits, probable UIDAI QR codes, faces, PAN numbers and passport MRZ regions are selected by default. The last 4 Aadhaar digits stay visible. Review selections, uncheck unwanted regions and use manual mode to cover anything missed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it remove the original text layer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every exported page is a new image with solid masks already painted onto it. The output has no original text layer or removable mask shapes. This only protects covered regions; review all pages for missed content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on multi-page PDFs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, up to 20 MB and 10 pages, subject to a 40-million-pixel budget per rasterized page and 80 million pixels for the document. Review each page with the preview controls. Split a PDF if it exceeds the memory budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about the Aadhaar QR code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QR codes can carry personal details separately from the printed number. DocRedact decodes them locally and selects probable UIDAI QR codes, but classification and detection can be wrong. Review every QR and use manual mode if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the output not searchable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The export discards the original text layer so covered text is not retained underneath a mask. The resulting image-only PDF is not searchable and may be larger than the input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is this free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The consumer tool is free and open source. A browser-side business integration is planned, not currently available. Join the API waitlist for updates."
+      }
+    }
+  ]
+}
